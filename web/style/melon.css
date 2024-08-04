@@ -1,0 +1,226 @@
+/*
+- 2024-08-02
+dear blake,
+you are still at that 9-5 wtf
+hopefully the repair business you launched a month
+ago lets you outgrow both this website and that unfun
+working environment. keep things simple and readable
+- 2023-03-14
+dear blake,
+it is 2023. you haven't touched a website until
+just now, and that's ok. letting things sit when
+they're fine is fine. you need to build a
+portfolio however; make the most of your free time
+and get out of that stupid 9-5 you hate -Blake
+ps: stop only using rust for things
+- 2021-*-*
+Always remember to responsive-ify your code.
+if you don't have the balls to do this, then
+you don't need to be making websites like this
+in the current year, 2021. grow a pair, take
+the time, and make it easier for the next guy,
+please. */
+
+/* Nunito */
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+/* Alegreya Sans */
+@import url("https://fonts.googleapis.com/css?family=Alegreya+Sans+SC");
+/* Fira Code */
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@360&display=swap');
+
+/* global constants: */
+:root {
+	/*color vars*/
+	--background-base: rgb(11, 110, 69);
+	--background-overlay:rgba(51, 0, 110, 0.151);
+	--text-color-accent: rgb(255, 192, 0);
+	--soundcloud-orange: rgb(255, 102, 0);
+	--tumblr-blue-dark: rgb(0, 25, 53);
+	--text-background-none: rgba(0, 0, 0, 0);
+	--text-color-foreground: rgb(237, 216, 178);
+	--transparent:rgba(0,0,0,0);
+	/*font vars*/
+	--text-font-info: "Nunito", sans-serif;
+	/*size vars*/
+	--font-readable-size: 12pt;
+	--font-heading-size: 32pt;
+	--block-border-radius: 15px;
+	/*scale vars*/
+	--page-scale-factor: 1.5vw;
+	--page-time-scale: 0.5s;
+}
+
+/* enforce box-sizing standard on all children */
+* {
+	box-sizing: border-box;
+}
+
+html {
+	background-color: var(--background-base);
+}
+
+body {
+	text-align: left;
+	
+}
+ul {
+	list-style: none;
+	align-items:left;
+	text-align: left;
+	padding-left:2px;
+	margin-left:2px;
+}
+img {
+	height: 250px;
+	border-style:none;
+	border-radius:var(--block-border-radius);
+}
+p,h1,h2,h3,h4,h5,h6,td {
+	font-family: var(--text-font-info);
+	color: var(--text-color-foreground);
+}
+
+p {
+	text-indent: 32px;
+}
+p,
+a {
+	font-size: var(--font-readable-size);
+	color: var(--text-color-foreground);
+}
+pre {
+	border-style:none;
+	border-radius:var(--block-border-radius);
+	overflow: hidden;
+}
+code {
+	font-family:"Fira Code",mono;
+	font-size: calc(var(--font-readable-size) * 0.85)
+	
+}
+.language-rust {
+	background-color:rgba(0,0,0,0);
+}
+h1 {
+	font-size: var(--font-heading-size);
+}
+
+div {
+	margin-left:20px;
+	margin-right:20px;
+	margin-bottom: var(--page-scale-factor);
+	border-style: solid;
+	border-color: rgba(40, 40, 100, 0);
+	border-radius: var(--block-border-radius);
+	background-color: var(--background-overlay);
+	padding: var(--page-scale-factor);
+}
+
+div.parent {
+	background-color: var(--background-overlay);
+}
+
+.staple {
+	display:inline-table;
+	clear:both;
+}
+/*
+.squeeze {
+	display:flex;
+	clear:none;
+}
+*/
+
+table {
+	border-style: inset;
+	border-radius: var(--block-border-radius);
+	border-color: var(--text-color-foreground);
+	padding: 18px
+}
+
+td {
+	border-style:inset;
+	border-color:inherit;
+	padding: 8px;
+	margin: 5px 5px 5px 5px;
+}
+tr:hover {
+	background-color:var(--background-base);
+}
+
+a, .expand {
+	color: #e8c8a7;
+	padding:4px;
+	border-style: none;
+	border-radius: none;
+	background-color: var(--background-overlay);
+	text-decoration: none;
+	font-weight: bold;
+	margin-bottom: 10vw;
+	transition: padding, var(--page-time-scale), font-weight var(--page-time-scale), margin-bottom var(--page-time-scale), color var(--page-time-scale),
+		border-radius var(--page-time-scale);
+}
+
+a:hover, .expand:hover {
+	padding: 8px;
+	color: var(--text-color-accent);
+	border-radius: var(--block-border-radius);
+	margin-bottom: 2vw;
+}
+
+a.soundcloud {
+	color: var(--text-color-fg);
+	background-color: var(--text-background-none);
+	border-radius: none;
+	font-weight: normal;
+	font-size: inherit;
+	cursor: pointer;
+	transition: background var(--page-time-scale), border-radius var(--page-time-scale);
+	-webkit-transition: background var(--page-time-scale), border-radius var(--page-time-scale);
+}
+
+a.soundcloud:hover {
+	color: var(--text-color-fg);
+	border-style: solid;
+	border-color: rgba(0, 0, 0, 0);
+	border-radius: 8px 8px 8px 8px;
+	background-color: var(--soundcloud-orange);
+}
+
+a.tumblr {
+	color: inherit;
+	background-color: inherit;
+	border-radius: none;
+	font-size: inherit;
+	cursor: pointer;
+	transition: background var(--page-time-scale), border-radius var(--page-time-scale);
+	-webkit-transition: background var(--page-time-scale), border-radius var(--page-time-scale);
+}
+a.tumblr:hover {
+	color: fff;
+	border-style: solid;
+	border-color: var(--text-background-none);
+	border-radius: 8px;
+	background-color: var(--tumblr-blue-dark);
+}
+/* screen widths greater than 600px */
+@media screen and (min-aspect-ratio: 1000001/1000000) {
+	.squeeze {
+		display:flex;
+		clear:none;
+	}
+}
+
+/* screen widths less than 600px (inclusive) */
+@media screen and (max-aspect-ratio: 1/1) and (width <= 600px) {
+	.squeeze {
+		float:none;
+		clear:both;
+	}
+	
+	/* force single-column layout for non-landscape devices */
+	div.left {
+		float: none;
+		clear: both;
+	}
+}
