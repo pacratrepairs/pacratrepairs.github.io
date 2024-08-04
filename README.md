@@ -1,2 +1,2 @@
-# [Repair Site](https://github.com/itspacrat/itspacrat.github.io)
+# [Repair Site](https://github.com/pacratrepairs/pacratrepairs.github.io)
 > with respect to the repair site (in development), any uploaded code or issue is not to be taken as legal advice, business-related endorsements, finalized pricing, or other policy relating to the business. The code pushed to our repository simply serves a a vehicle to render the site's data to te browser in an open-source format; If you want pricing guarantees, ***visit the site***.
